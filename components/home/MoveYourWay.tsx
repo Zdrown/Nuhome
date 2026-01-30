@@ -9,7 +9,7 @@ export function MoveYourWay() {
         {/* Image */}
         <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl order-1">
           <Image
-            src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=2070&auto=format&fit=crop"
+            src="https://i.pinimg.com/736x/98/84/53/9884530573e39b6442ce34b3d13a1574.jpg"
             alt="Moving supplies and boxes"
             fill
             className="object-cover"
