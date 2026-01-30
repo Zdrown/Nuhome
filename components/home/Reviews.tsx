@@ -13,25 +13,19 @@ const reviews = [
     id: 1,
     name: "Sarah M.",
     rating: 5,
-    text: "NuHome Movers made our move so easy! They were professional, fast, and handled everything with care. Highly recommended!",
+    text: "Moved us from Worcester to Shrewsbury without a scratch. True professionals!",
   },
   {
     id: 2,
-    name: "James P.",
+    name: "James R.",
     rating: 5,
-    text: "Best moving company I've ever used. The team was friendly and efficient. They beat the competitor's price just like they promised.",
+    text: "Best local movers we've found. They knew exactly how to handle the narrow streets in the city.",
   },
   {
     id: 3,
-    name: "Emily R.",
+    name: "Emily T.",
     rating: 5,
-    text: "I was stressed about moving, but NuHome took all the worry away. Great communication and excellent service.",
-  },
-  {
-    id: 4,
-    name: "Michael T.",
-    rating: 5,
-    text: "Professional, punctual, and polite. They packed everything securely and nothing was damaged. 10/10 service.",
+    text: "Supported a local business and wasn't disappointed. Friendly, fast, and careful.",
   },
 ];
 

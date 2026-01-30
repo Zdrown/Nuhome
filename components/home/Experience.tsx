@@ -13,7 +13,7 @@ export function Experience() {
             Safe, Expert Moving with <span className="text-[var(--color-tomato)]">7+ Years</span> of Experience
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
-            We've been moving people's beloved possessions to their new home with care and precision. Our team of professionals ensures that every item, from the smallest trinket to the largest furniture, arrives safely.
+            For over 7 years, we've been the trusted movers for families across our local communities. From tight city apartments to suburban homes, we treat your possessions with the care of a neighbor.
           </p>
           <Button asChild variant="outline" className="group border-[var(--color-tomato)] text-[var(--color-tomato)] hover:bg-[var(--color-tomato)] hover:text-white">
             <Link href="/schedule" className="flex items-center gap-2">
