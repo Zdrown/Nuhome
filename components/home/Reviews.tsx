@@ -27,6 +27,24 @@ const reviews = [
     rating: 5,
     text: "Supported a local business and wasn't disappointed. Friendly, fast, and careful.",
   },
+  {
+    id: 4,
+    name: "Mike D.",
+    rating: 5,
+    text: "Moved our 4-bedroom house in Framingham. The team was efficient and handled everything with care.",
+  },
+  {
+    id: 5,
+    name: "Jessica L.",
+    rating: 5,
+    text: "I was worried about my antiques, but the MetroWest team wrapped everything perfectly. Highly recommend!",
+  },
+  {
+    id: 6,
+    name: "David K.",
+    rating: 5,
+    text: "Great experience moving from Boston to Cape Cod. On time and under budget.",
+  },
 ];
 
 export function Reviews() {
