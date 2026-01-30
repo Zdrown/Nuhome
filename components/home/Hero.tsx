@@ -8,7 +8,7 @@ export function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop"
+          src="https://i.pinimg.com/1200x/99/6e/61/996e61ace4cd5d1a710ae3bcf1e70422.jpg"
           alt="Happy family moving"
           fill
           className="object-cover"
