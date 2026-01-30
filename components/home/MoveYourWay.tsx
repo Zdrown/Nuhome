@@ -9,10 +9,11 @@ export function MoveYourWay() {
         {/* Image */}
         <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl order-1">
           <Image
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80"
+            src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=2070&auto=format&fit=crop"
             alt="Moving supplies and boxes"
             fill
             className="object-cover"
+            unoptimized
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60" />
         </div>

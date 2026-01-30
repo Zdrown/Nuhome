@@ -79,32 +79,32 @@ export function ScheduleForm() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true)
 
-    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
-    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
-    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_w6lssbe'
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'template_9z7zs2i'
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'NmP8eQ1miRImw2xfC'
+
+    if (!publicKey) {
+      console.error("Missing EmailJS Public Key")
+      toast.error("System configuration error.")
+      setIsSubmitting(false)
+      return
+    }
+
+    const templateParams = {
+      ...values,
+      move_date: values.move_date ? format(values.move_date, "PPP") : "",
+    }
+
+    console.log('Sending email with params:', templateParams)
 
     try {
-      if (!serviceId || !templateId || !publicKey) {
+      if (!serviceId || !templateId) {
         // Mock Mode
-        console.log("Mock Submission:", values)
+        console.log("Mock Submission:", templateParams)
         await new Promise((resolve) => setTimeout(resolve, 1000))
       } else {
         // EmailJS Submission
-        await emailjs.send(
-          serviceId,
-          templateId,
-          {
-            user_name: values.user_name,
-            user_email: values.user_email,
-            user_phone: values.user_phone,
-            move_date: format(values.move_date, "PPP"),
-            move_time: values.move_time,
-            home_size: values.home_size,
-            move_type: values.move_type,
-            message: values.message,
-          },
-          publicKey
-        )
+        await emailjs.send(serviceId, templateId, templateParams, publicKey)
       }
 
       toast.success("Move Scheduled! We will call you to confirm your 20% price beat.")
@@ -113,7 +113,7 @@ export function ScheduleForm() {
         router.push("/")
       }, 2000)
     } catch (error) {
-      console.error("Submission error:", error)
+      console.error("Submission error:", JSON.stringify(error))
       toast.error("There was an error. Please call (774) 722-5923.")
     } finally {
       setIsSubmitting(false)
